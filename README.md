@@ -57,6 +57,8 @@ Même avec de l'Unrolling, la boucle `j` nécessitait encore de recalculer `b[j]
 - **Transformation** : Allocation dynamique globale (`malloc`) de tableaux retenant préventivement `sinf(b)`, `tanf(b)`, `1/cosf(b)` et `1/tanf(b)`. La boucle imbriquée ne réalise alors strictement plus **aucun appel de trigonométrie**, uniquement des multiplications et affectations mémoire rapides.
 - **Résultat flag `-O3`** : L'efficience est foudroyante. Combinée aux flags puissants (`-ffast-math -O3 -march=native -funroll-loops`), la boucle interne a atteint un **ratio de vectorisation exclusif de 100 %**.  Le ratio de temps passé dans les appels lents de `math.h` devient désormais complètement négligeable dans les rapports MAQAO Profiler.
 
+<img width="459" height="208" alt="Capture d’écran 2026-04-21 à 13 01 31" src="https://github.com/user-attachments/assets/360f02a8-23f9-4c3a-aeae-426fc3e8d2ec" />
+
 ### OPT5 : Optimisations Avancées (OpenMP / Multithreading)
 Une version OPT5 (théorisée) est incluse pouvant inclure des directives `<omp.h>` : `#pragma omp parallel for private(i, j)`. Sur des grandes matrices (exemple $n \ge 800$), le travail de calcul préventif sera découpé par threads, permettant des gains qui échelonnent l'accélération mathématiquement au nombre disponible de cœurs physiques du Ryzen.
 
