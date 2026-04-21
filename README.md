@@ -1,4 +1,4 @@
-# Analyse et performance avec gcc : Optimisation de Noyau C
+# Analyse et performance avec gcc : Optimisation C
 
 Ce répertoire présente une étude approfondie en calcul haute performance (HPC) portant sur l'optimisation incrémentale d'un noyau mathématique en langage C intensif en fonctions trigonométriques.
 
