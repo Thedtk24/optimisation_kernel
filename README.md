@@ -45,6 +45,8 @@ Les calculs à base de `b[i]` étaient redondants pour chaque itération de la b
 - **Transformation** : Précalcul des fonctions trigonométriques sur `b[i]` hors de la boucle interne. Remplacement des calculs de précision double `sin/cos/tan` par leurs équivalents en 32 bits `sinf/cosf/tanf`. 
 - **Résultat** : Le temps perdu dans l'appel à la bibliothèque `math.h` a été diminué de 4 %. Par ailleurs, la manipulation du 32 bits peut optimiser l'utilisation des registres vectoriels (8 floats par registre 256-bits).
 
+<img width="433" height="249" alt="Capture d’écran 2026-04-21 à 12 58 05" src="https://github.com/user-attachments/assets/c9fd671d-78c8-4756-8911-eb80fbf495ef" />
+
 ### OPT3 : Déroulage de Boucle (Unrolling)
 Le modulo (`i % 4`) utilisé pour les règles trigonométriques ne dépend pas de `j`. Il bloquait les optimisations de branchement depuis l'intérieur du noyau.
 - **Transformation** : Séparation des conditions hors de la boucle, puis déroulage explicite de la boucle interne `j` par des pas de 4 pour offrir plus de granularité au pipeline.
