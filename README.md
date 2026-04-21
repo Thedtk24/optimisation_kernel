@@ -52,7 +52,7 @@ Le modulo (`i % 4`) utilisé pour les règles trigonométriques ne dépend pas d
 - **Transformation** : Séparation des conditions hors de la boucle, puis déroulage explicite de la boucle interne `j` par des pas de 4 pour offrir plus de granularité au pipeline.
 - **Résultat** : Les tests de fin de boucle et les incréments de `j` ayant dramatiquement diminué, le temps accumulé dans les boucles externes fut réduit de moitié !
 
-### OPT4 : L'Optimisation Ultime ($O(N^2) \rightarrow O(N)$)
+### OPT4 : L'Optimisation Ultime (O(N^2) --> O(N))
 Même avec de l'Unrolling, la boucle `j` nécessitait encore de recalculer `b[j]` localement.
 - **Transformation** : Allocation dynamique globale (`malloc`) de tableaux retenant préventivement `sinf(b)`, `tanf(b)`, `1/cosf(b)` et `1/tanf(b)`. La boucle imbriquée ne réalise alors strictement plus **aucun appel de trigonométrie**, uniquement des multiplications et affectations mémoire rapides.
 - **Résultat flag `-O3`** : L'efficience est foudroyante. Combinée aux flags puissants (`-ffast-math -O3 -march=native -funroll-loops`), la boucle interne a atteint un **ratio de vectorisation exclusif de 100 %**.  Le ratio de temps passé dans les appels lents de `math.h` devient désormais complètement négligeable dans les rapports MAQAO Profiler.
