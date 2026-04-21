@@ -27,7 +27,7 @@ Les tailles $n$ choisies pour cibler spécifiquement les caches du Ryzen 3700U s
 ### Calibration (Warm-up)
 Les métriques soulignent que l'exécution se stabilise à partir de la 4ème itération d'échauffement cache. Par mesure de fiabilité, l'échauffement a été **fixé à 15 répétitions**.
 
-<img width="300" height="300" alt="warmup_thed" src="https://github.com/user-attachments/assets/9015f3c5-0f13-4b2f-baea-d23df66b6abd" />
+<img width="500" height="300" alt="warmup_thed" src="https://github.com/user-attachments/assets/9015f3c5-0f13-4b2f-baea-d23df66b6abd" />
 
 ## Transformations et Mesures d'Optimisation
 
