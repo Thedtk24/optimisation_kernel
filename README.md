@@ -14,6 +14,8 @@ Les mesures de performances ont été réalisées dans l'environnement suivant :
 - **Compilateur** : gcc 13.3.0
 - **Analyseur de Performance** : MAQAO 2026.0.0.b
 
+<img width="663" height="439" alt="lstopo_thed" src="https://github.com/user-attachments/assets/e422c6a4-71e0-4146-bf91-0eff98d1b608" />
+
 ## Méthodologie Expérimentale
 
 ### Choix de la taille mémoire ($n$)
