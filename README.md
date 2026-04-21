@@ -70,6 +70,8 @@ Le passage de NOOPT à des structures avancées a débloqué tout le potentiel s
 3. Restructuration algorithmique radicale de la charge de calcul (OPT4).
 Couplé à MAQAO, ce projet illustre finement comment compiler intelligemment (de `-O2` à `-O3 -march=native`) pour sublimer du code et exploiter formellement le multicoeur.
 
+<img width="356" height="235" alt="Capture d’écran 2026-04-21 à 13 03 24" src="https://github.com/user-attachments/assets/1472c3e4-d7fa-4953-ad2e-d33b0e4779ab" />
+
 ---
 
 ## Compilation & Exécution
