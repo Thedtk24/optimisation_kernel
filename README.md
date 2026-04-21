@@ -14,7 +14,7 @@ Les mesures de performances ont été réalisées dans l'environnement suivant :
 - **Compilateur** : gcc 13.3.0
 - **Analyseur de Performance** : MAQAO 2026.0.0.b
 
-<img width="663" height="439" alt="lstopo_thed" src="https://github.com/user-attachments/assets/e422c6a4-71e0-4146-bf91-0eff98d1b608" />
+<img width="432" height="284" alt="Capture d’écran 2026-04-21 à 13 00 06" src="https://github.com/user-attachments/assets/73eee917-2acc-46e0-8adf-e048f11b6392" />
 
 ## Méthodologie Expérimentale
 
